@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0d1713">
+  <title>US Pipe Water System RIO Walkdown</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div class="hero-topline">
+        <div class="eyebrow">Quote Walkdown</div>
+        <a class="other-walkdown" href="https://andsuch-mods.github.io/General-AI-Test-Space-2/">Cooling Tower Walkdown</a>
+      </div>
+      <h1>US Pipe — Water System Remote I/O</h1>
+      <p class="sub">Focused questions for CSI’s controls scope, plus the Sky field details that can change our hardware, network, programming, or price.</p>
+      <div class="save-note"><span class="dot"></span>Answers autosave locally on this device.</div>
+    </header>
+
+    <section class="meta card">
+      <div class="meta-grid">
+        <div class="field">
+          <label>Walkthrough date</label>
+          <div class="date-display" aria-label="Walkthrough date August 17, 2026">Aug 17, 2026</div>
+        </div>
+        <div class="field">
+          <label for="generalNotes">General notes</label>
+          <textarea id="generalNotes" placeholder="Anything that does not fit a specific question…" data-meta="generalNotes"></textarea>
+        </div>
+      </div>
+    </section>
+
+    <section class="size-card card" aria-labelledby="sizeTitle">
+      <div class="eyebrow">Preliminary Size</div>
+      <h2 id="sizeTitle">Plant-wide job with an architecture-dependent controls scope</h2>
+      <div class="size-grid">
+        <article><strong>7</strong><span>locations must be quoted separately</span></article>
+        <article><strong>8*</strong><span>apparent meter signals — confirm exact count</span></article>
+        <article><strong>Up to 7</strong><span>new RIO drops if the general scope is applied literally</span></article>
+        <article><strong>2 platforms</strong><span>Allen-Bradley and legacy GE systems</span></article>
+      </div>
+      <p class="size-note">The field-installation package is substantial. CSI’s portion could remain moderate if existing spare analog channels are used, or become a much larger controls retrofit if new RIO, gateways, network work, or PLC upgrades are required at each location.</p>
+    </section>
+
+    <section class="risk-card card" aria-labelledby="riskTitle">
+      <div class="eyebrow">Resolve First</div>
+      <h2 id="riskTitle">Three items that can change the entire quote</h2>
+      <div class="risk-grid">
+        <article>
+          <strong>AB hardware compatibility</strong>
+          <p>The package specifies 5034 PointMax I/O, while the Hot/Coldwell photo appears to show an older 1769 CompactLogix. Confirm whether a controller upgrade or different remote I/O platform is intended.</p>
+        </article>
+        <article>
+          <strong>GE / PROFINET compatibility</strong>
+          <p>The package specifies a Weidmüller PROFINET coupler, while the photos show legacy GE Series 90-30 and Genius equipment. Confirm the actual PROFINET controller, gateway, or upgrade plan.</p>
+        </article>
+        <article>
+          <strong>Meter output</strong>
+          <p>Verify every Seametrics meter has a usable 4–20 mA output and the required passive-loop power/output cable. Do not assume the wireless system is presently using analog.</p>
+        </article>
+      </div>
+    </section>
+
+    <details class="reference card">
+      <summary>Preliminary CSI / Sky scope split</summary>
+      <div class="split-grid">
+        <article>
+          <h3>CSI</h3>
+          <p>RIO architecture and compatibility; controls hardware/enclosures as quoted; PLC communications; I/O mapping and scaling; diagnostics; program backups; startup and commissioning.</p>
+        </article>
+        <article>
+          <h3>Sky</h3>
+          <p>Field measurements; conduit, cable, boxes, supports and mounting; power/network/analog pulls; field terminations; wireless-system demolition; labeling; field assistance during checkout.</p>
+        </article>
+        <article>
+          <h3>Shared decisions</h3>
+          <p>Per-location architecture, meter signal verification, panel and network connection points, cable media, route selection, cutover sequence, and final responsibility boundaries.</p>
+        </article>
+      </div>
+    </details>
+
+    <details class="reference card">
+      <summary>Known location notes from the package</summary>
+      <div class="known-grid">
+        <article><h3>Hot/Coldwell</h3><p>Two analog cables are described through an existing conduit to an existing rack.</p></article>
+        <article><h3>Melting</h3><p>Reference route: nearby T-condulet to a control panel; roughly 50 ft conduit and 120 ft analog cable.</p></article>
+        <article><h3>LD Test Press</h3><p>Two options: nearby GE rack, or a longer route to the new Test Press panel that may also support replacement of temporary cabling.</p></article>
+        <article><h3>Old Core Room</h3><p>Reference route to a nearby GE/Genius remote I/O enclosure; roughly 80 ft.</p></article>
+        <article><h3>Oven Pond</h3><p>Reference route to the Oven 4 control room and PLC rack; roughly 80 ft.</p></article>
+        <article><h3>High Pressure Pump Room</h3><p>Route through the hydraulic I/O junction box to the new Test Press control panel.</p></article>
+        <article><h3>Mini Mill Main</h3><p>Longest route, from the main water meter to the Gantry Hot/Coldwell remote I/O panel.</p></article>
+      </div>
+      <p class="reference-note">All route footage in the package is reference-only and must be measured for quotation.</p>
+    </details>
+
+    <section class="toolbar card">
+      <div class="progress-row">
+        <div class="progress" aria-label="Walkthrough progress"><div id="progressBar"></div></div>
+        <div class="progress-text" id="progressText">0 answered · 0 skipped · 0 open</div>
+      </div>
+      <div class="toolbar-row">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="open">Open</button>
+        <button class="chip" data-filter="critical">Critical</button>
+        <button class="chip" data-filter="answered">Answered</button>
+        <button class="chip" data-filter="skipped">Skipped</button>
+        <span class="toolbar-spacer"></span>
+        <button class="action" id="copyBtn">Copy Summary</button>
+        <button class="action primary" id="exportBtn">Export Notes</button>
+        <button class="action danger" id="resetBtn">Reset</button>
+      </div>
+      <nav class="jump-row" id="jumpRow" aria-label="Jump to question section"></nav>
+    </section>
+
+    <div id="sections"></div>
+
+    <section class="photo-section card">
+      <h2>Photo & Measurement Checklist</h2>
+      <p>Capture enough detail to select hardware and price each location without another trip.</p>
+      <div class="photo-grid" id="photoGrid"></div>
+    </section>
+
+    <section class="custom-box card">
+      <div class="eyebrow">On-the-fly</div>
+      <h2>Add a question</h2>
+      <div class="custom-row">
+        <input id="customQuestion" type="text" placeholder="Add something that comes up during the walkthrough…">
+        <button class="action primary" id="addQuestionBtn">Add Question</button>
+      </div>
+    </section>
+
+    <div class="empty" id="emptyState">No questions match this filter.</div>
+    <footer>US Pipe Bessemer Plant · Water System Remote I/O · Quote Walkdown Notes</footer>
+  </main>
+  <div class="toast" id="toast">Saved</div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
